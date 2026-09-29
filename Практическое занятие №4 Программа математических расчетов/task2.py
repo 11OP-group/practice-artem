@@ -1,13 +1,15 @@
 import math # библиотечность
 
-# ввод чисел
-x1 = float(input())
-y1 = float(input())
-x2 = float(input())
-y2 = float(input())
+# вызов функции
+def calc_dist(x1, y1, x2, y2):
+    eucl_dist = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+    return eucl_dist
 
-# считаем по формуле
-p = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+# ввод чисел
+x1, y1 = map(float, input("Введите координаты первой точки (x y): ").split())
+x2, y2 = map(float, input("Введите координаты второй точки (x y): ").split())
+
+distance = calc_dist(x1, y1, x2, y2)
 
 # вывод
-print(p)
+print(f"Расстояние между точками равно {distance:.2f}")

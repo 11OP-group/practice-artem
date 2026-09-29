@@ -1,7 +1,9 @@
-# вводим номер места
-a = int(input())
+SEATS_PER_KUPE = 4
 
-z = (a - 1) // 4 + 1 # считаем типо
+# вводим номер места
+place_number = int(input("Введите номер вашего места: "))
+
+kupe_number = (place_number - 1) // SEATS_PER_KUPE + 1 # считаем типо
 
 # выводимость
-print("Ваше место находится в купе №: ", z)
+print(f"Место {place_number} находится в купе №{kupe_number}")
