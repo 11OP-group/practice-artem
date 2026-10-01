@@ -11,6 +11,6 @@ tax = income * TAX_RATE
 income_after_tax = income - tax
 
 # вывод
-print(f"Общая сумма дохода: {income:,.2f} руб.")
-print(f"Сумма налога: {tax:,.2f} руб.")
-print(f"Сумма на руки: {income_after_tax:,.2f} руб.")
+print(f"Общая сумма дохода: {income:,.2f} руб.".replace(",", " "))
+print(f"Сумма налога: {tax:,.2f} руб.".replace(",", " "))
+print(f"Сумма на руки: {income_after_tax:,.2f} руб.".replace(",", " "))
