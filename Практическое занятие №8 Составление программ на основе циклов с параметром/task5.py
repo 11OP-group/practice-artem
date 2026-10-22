@@ -3,6 +3,8 @@ n = int(input("Введите количество чисел: "))
 biggest = 0
 biggest2 = 0
 
+print("↓ Теперь построчно введите сами числа ↓")
+
 for i in range(n):
     number = int(input())
     if number > biggest:
