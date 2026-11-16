@@ -1,8 +1,25 @@
-print(f"У вас 100р\nПри стоимость Быка в 10, коровы в 5 и телёнка в 0,5\nВы можете купить максимум:\n")
+powers = [i**5 for i in range(151)]
 
-for bull in range(0, 11):
-    for cow in range(0, 21):
-        for baby in range(0, 201):
-            if 10 * bull + 5 * cow + 0.5 * baby == 100:
-                if bull + cow + baby >= 1:
-                    print(f"Быков: {bull}, Коров: {cow}, Телят: {baby}")
+find = False
+
+for a in range(1, 151):
+    for b in range(a, 151):
+        for c in range(b, 151):
+            for d in range(c, 151):
+                sum = powers[a] + powers[b] + powers[c] + powers[d]
+                for e in range(d, 151):
+                    if powers[e] == sum:
+                        print(a, b, c, d, e)
+                        print(a + b + c + d + e)
+                        find = True
+                        break
+                    if powers[e] > sum:
+                        break
+                if find:
+                    break
+            if find:
+                break
+        if find:
+            break
+    if find:
+        break
